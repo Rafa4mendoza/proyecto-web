@@ -1,5 +1,5 @@
 
-class RemoveCinturaFormPacientes < ActiveRecord::Migration[5.0]
+class RemoveCinturaFormPacientes < ActiveRecord::Migration[5.1]
     def up
         remove_column :pacientes, :cintura, :float
       end
