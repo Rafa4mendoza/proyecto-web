@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col s12 no-padding-left">
+    <div class="card">
+      <div class="card-item-half left">
+          <p class"card-title">Nutriologo</p>
+        <p>
+          <img src="<%= asset_path( 'nutriologo_login.jpg' ) %>" height="120px" width="120px"/>
+        </p>
+        <%= link_to "Ingresa Aquí", '/nutriologos/sign_in', class: "card-action left" %>
+      </div>
+      <div class="divider"></div>
+      <div class="card-item-half right">
+        <p class"card-title">Paciente</p>
+        <p>
+          <i class="material-icons md-120">person</i>
+        </p>
+        <%= link_to "Ingresa Aquí", '/pacientes/sign_in', class: "card-action right" %>
+      </div>
+    </div>
+  </div>
+</div>

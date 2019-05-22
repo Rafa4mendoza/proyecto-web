@@ -1,0 +1,171 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card rounded" style="margin: auto; text-align='center'">
+      <div class="card-content">
+        <p class="font-size-title">Hola <%= current_paciente.username %>, tu plan es <%=current_paciente.objetivo%> y estos son tus datos:</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s2">
+      <div class="card rounded">
+        <div class="card-content">
+          <p class="card-title">Datos Iniciales</p>
+        <%if current_paciente_sesions.first != nil%>
+          <table class="responsive-table centered highlight">
+            <thead>
+            </thead>
+            <tbody>
+              <tr>
+                <td><p>Peso: <%= current_paciente_sesions.first.peso %> kg.</p></td>
+              </tr>
+              <tr>
+                <td><p>Estatura: <%= current_paciente_sesions.first.estatura %> m.</p></td>
+              </tr>
+              <tr>
+                <td><p>Grasa: <%= current_paciente_sesions.first.grasa %>%</p></td>
+              </tr>
+              <tr>
+                <td><p>Músculo: <%= current_paciente_sesions.first.musculo %>%</p></td>
+              </tr>
+              <tr>
+                <td><p>Cintura: <%= current_paciente_sesions.first.cintura %> cm.</p></td>
+              </tr>
+              <tr>
+                <td><p>IMC: <%= current_paciente_sesions.first.imc %></p></td>
+              </tr>
+              <tr>
+                <td><p>G.V.:<%= current_paciente_sesions.first.grasa_vis %></p></td>
+              </tr>
+              <tr>
+                <td><p>E.M.: <%= current_paciente_sesions.first.edad_metabolica %></p></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class ="row" style="margin-top: 15px">
+            <div class="col s12">
+              <p class="grey-text text-darken-1 font-size-small">*IMC: Índice de Masa Corporal</p>
+            </div>
+            <div class="col s12">
+              <p class="grey-text text-darken-1 font-size-small">*G.V.: Grasa Visceral</p>
+            </div>
+            <div class="col s12">
+              <p class="grey-text text-darken-1 font-size-small">*E.M.: Edad Metabólica</p>
+            </div>
+          </div>
+        <% else %>
+          <div class ="row">
+            <div class="col s10 offset-s1 card-panel blue lighten-4">
+              <p>Por el momento no tienes información</p>
+            </div>
+          </div>
+        <% end %>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col s10">
+        <div class="row">
+          <div class="col s12">
+            <div class="card rounded">
+            <div class="card-content">
+              <p class="card-title">Seguimiento</p>
+              <table class="responsive-table centered highlight" style="font-size: 12pt;">
+                <thead>
+                  <tr>
+                    <th><p>Número Sesión</p></th>
+                    <th><p>Peso</p></th>
+                    <th><p>Estatura</p></th>
+                    <th><p>Grasa</p></th>
+                    <th><p>Músculo</p></th>
+                    <th><p>Cintura</p></th>
+                    <th><p>IMC</p></th>
+                    <th><p>G.V.</p></th>
+                    <th><p>E.M.</p></th>
+                    <th><p>Hora</p></th>
+                    <th><p>Nutriólogo</p></th>
+                    <th colspan="11"></th>
+                  </tr>
+                </thead>
+                <% numS=1%>
+                <tbody>
+                  <% current_paciente_sesions.each do |sesion| %>
+
+                    <tr>
+                      <td><p><%=numS%></p></td>
+                      <td><p><%= sesion.peso %>kg</p></td>
+                      <td><p><%= sesion.estatura %>m</p></td>
+                      <td><p><%= sesion.grasa %>%</p></td>
+                      <td><p><%= sesion.musculo %>%</p></td>
+                      <td><p><%= sesion.cintura %>cm</p></td>
+                      <td><p><%= sesion.imc %></p></td>
+                      <td><p><%= sesion.grasa_vis %></p></td>
+                      <td><p><%= sesion.edad_metabolica %></p></td>
+                      <td><p><%= getDia(sesion.hora_id) %></p></td>
+                      <td><p><%=getNutriologoName(sesion.nutriologo_id)%></p></td>
+                    </tr>
+                    <% numS+=1%>
+                  <% end %>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12">
+        <div class="card rounded">
+          <div class="card-content">
+            <p class="card-title">Historial</p>
+            <div class="row">
+              <div class = "col s4">
+                <div class="row">
+                  <div class="col s12">
+                    <p>Historial de Peso</p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col s12">
+                    <%= line_chart current_paciente_pesos %>
+                  </div>
+                </div>
+              </div>
+
+              <div class = "col s4">
+                <div class="row">
+                  <div class="col s12">
+                    <p>Historial de % de Grasa</p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col s12">
+                    <%= line_chart current_paciente_grasa %>
+                  </div>
+                </div>
+              </div>
+
+              <div class = "col s4">
+                <div class="row">
+                  <div class="col s12">
+                    <p>Historial de % de Músculo</p>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col s12">
+                    <%= line_chart current_paciente_musculo %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

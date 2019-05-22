@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card rounded" style="margin: auto; text-align='center'">
+      <div class="card-content">
+<%= form_with(model: sesion, local: true) do |form| %>
+  <% if sesion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sesion.errors.count, "error") %> prohibited this sesion from being saved:</h2>
+
+      <ul>
+      <% sesion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+      <%= form_for(@sesion) do |f| %>
+        <%= f.label :peso %>
+        <%= f.number_field :peso, step: :any %>
+
+        <%= f.label :estatura %>
+        <%= f.number_field :estatura, step: :any %>
+
+        <%= f.label :grasa%>
+        <%= f.number_field :grasa, step: :any %>
+
+        <%= f.label :músculo %>
+        <%= f.number_field :musculo, step: :any %>
+
+        <%= f.label :Cintura %>
+        <%= f.number_field :cintura, step: :any %>
+
+        <%= f.label :imc%>
+        <%= f.number_field :imc, step: :any %>
+
+        <%= f.label :grasa_vis %>
+        <%= f.number_field :grasa_vis, step: :any %>
+
+        <%= f.label :edad_metabólica %>
+        <%= f.number_field :edad_metabolica, step: :any %>
+
+        <div style="padding-bottom: 30px; padding-top: 20px;">
+          <%= f.submit "Guardar", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+<% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
