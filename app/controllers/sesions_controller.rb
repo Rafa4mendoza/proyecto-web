@@ -9,7 +9,7 @@ class SesionsController < ApplicationController
   end
 
   def update
-    if @sesion.peso != nil && @sesion.estatura != nil && @sesion.grasa != nil && @sesion.musculo != nil && @sesion.imc != nil && @sesion.grasa_vis != nil && @sesion.edad_metabolica != nil
+    if @sesion.peso != nil && @sesion.estatura != nil && @sesion.grasa != nil  && @sesion.imc != nil && @sesion.grasa_vis != nil && @sesion.edad_metabolica != nil
       @sesion.update(active: false)
       @sesion.save!
     end
@@ -71,6 +71,6 @@ class SesionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def sesion_params
       params.require(:sesion).permit(:peso, :estatura, :grasa,
-        :musculo, :cintura, :imc, :grasa_vis, :edad_metabolica, :hora_id, :paciente_id)
+        :musculo, :cintura, :imc, :grasa_vis, :edad_metabolica, :cadera, :hora_id, :paciente_id)
     end
 end

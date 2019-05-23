@@ -16,28 +16,31 @@
   <% end %>
 
       <%= form_for(@sesion) do |f| %>
-        <%= f.label :peso %>
-        <%= f.number_field :peso, step: :any %>
-
-        <%= f.label :estatura %>
+        <%= f.label :Estatura %>
         <%= f.number_field :estatura, step: :any %>
 
-        <%= f.label :grasa%>
-        <%= f.number_field :grasa, step: :any %>
+        <%= f.label :Peso %>
+        <%= f.number_field :peso, step: :any %>
 
-        <%= f.label :músculo %>
-        <%= f.number_field :musculo, step: :any %>
-
-        <%= f.label :Cintura %>
-        <%= f.number_field :cintura, step: :any %>
-
-        <%= f.label :imc%>
+        <%= f.label :Imc%>
         <%= f.number_field :imc, step: :any %>
 
-        <%= f.label :grasa_vis %>
+        <%= f.label :Grasa %>
+        <%= f.number_field :grasa, step: :any %>
+
+        <%= f.label :Músculo %>
+        <%= f.number_field :musculo, step: :any %>
+
+        <%= f.label :Cintura%>
+        <%= f.number_field :cintura, step: :any %>
+
+        <%= f.label :Cadera%>
+        <%= f.number_field :cadera, step: :any %>
+
+        <%= f.label :Grasa_vis %>
         <%= f.number_field :grasa_vis, step: :any %>
 
-        <%= f.label :edad_metabólica %>
+        <%= f.label :Edad_metabólica %>
         <%= f.number_field :edad_metabolica, step: :any %>
 
         <div style="padding-bottom: 30px; padding-top: 20px;">
