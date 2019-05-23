@@ -1,4 +1,4 @@
 class Video < ApplicationRecord
     
-  has_one :fases
+  belongs_to :fase
 end
