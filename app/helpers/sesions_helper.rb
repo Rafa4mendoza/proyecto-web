@@ -95,4 +95,14 @@ module SesionsHelper
     @current_paciente_musculo ||= musculo
   end
 
+  def current_paciente_cadera
+    cadera = []
+    current_paciente_sesions.each_with_index do |sesion, index|
+      cadera_index = []
+      cadera_index.push("Sesion#{index+1}", sesion.cadera)
+      cadera.push(cadera_index)
+    end
+    @current_paciente_cadera ||= cadera
+  end
+
 end
