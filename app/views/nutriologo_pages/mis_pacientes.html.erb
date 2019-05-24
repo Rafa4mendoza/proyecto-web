@@ -18,7 +18,7 @@
         <th><p>Paciente</p></th>
         <th colspan="8"><p></p></th>
         <th> 
-        <%= form_tag(sesions_path, method: :get,class: "buscador") do %>
+        <%= form_tag(sesions_path, method: :get) do %>
           <%= text_field_tag :term %>
           <%= submit_tag 'Buscar', class: " btn btn-primary" %>
         <% end %>
