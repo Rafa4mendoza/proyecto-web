@@ -9,7 +9,7 @@ class SesionsController < ApplicationController
   end
 
   def update
-    if @sesion.peso != nil && @sesion.estatura != nil && @sesion.grasa != nil  && @sesion.imc != nil && @sesion.grasa_vis != nil && @sesion.edad_metabolica != nil
+    if @sesion.peso != nil && @sesion.grasa != nil  && @sesion.imc != nil && @sesion.grasa_vis != nil && @sesion.edad_metabolica != nil
       @sesion.update(active: false)
       @sesion.save!
     end

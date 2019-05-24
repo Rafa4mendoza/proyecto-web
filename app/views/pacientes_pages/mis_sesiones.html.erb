@@ -86,8 +86,9 @@
                     <th><p>Peso</p></th>
                     <th><p>Estatura</p></th>
                     <th><p>Grasa</p></th>
-                    <th><p>Músculo</p></th>
+                   <!--  <th><p>Músculo</p></th>-->
                     <th><p>Cintura</p></th>
+                    <th><p>Cadera</p></th>
                     <th><p>IMC</p></th>
                     <th><p>G.V.</p></th>
                     <th><p>E.M.</p></th>
@@ -105,8 +106,9 @@
                       <td><p><%= sesion.peso %>kg</p></td>
                       <td><p><%= sesion.estatura %>m</p></td>
                       <td><p><%= sesion.grasa %>%</p></td>
-                      <td><p><%= sesion.musculo %>%</p></td>
+                     <!--  <td><p><%= sesion.musculo %>%</p></td>-->
                       <td><p><%= sesion.cintura %>cm</p></td>
+                      <td><p><%= sesion.cadera %>cm</p></td>
                       <td><p><%= sesion.imc %></p></td>
                       <td><p><%= sesion.grasa_vis %></p></td>
                       <td><p><%= sesion.edad_metabolica %></p></td>
@@ -157,13 +159,13 @@
               <div class = "col s4">
                 <div class="row">
                   <div class="col s12">
-                    <p>Historial de % de Músculo</p>
+                    <p>Historial de % de Cadera</p>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col s12">
-                    <%= line_chart current_paciente_musculo %>
+                    <%= line_chart current_paciente_cadera %>
                   </div>
                 </div>
               </div>
