@@ -3,7 +3,7 @@ class FasesController < ApplicationController
 
 
   def index
-    @fase = Fase.all
+    @fase ||= Fase.all
   end
 
   def edit
