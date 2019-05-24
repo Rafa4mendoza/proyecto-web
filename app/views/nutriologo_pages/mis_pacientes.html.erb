@@ -19,7 +19,7 @@
         <th colspan="8"><p></p></th>
         <th> 
         <%= form_tag(sesions_path, method: :get) do %>
-          <%= text_field_tag :term, class: "buscador" %>
+          <%= text_field_tag :term,"", class: "buscador" %>
           <%= submit_tag 'Buscar', class: " btn btn-primary" %>
         <% end %>
         </th>
