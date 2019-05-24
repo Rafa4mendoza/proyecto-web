@@ -16,11 +16,11 @@
     <thead>
       <tr>
         <th><p>Paciente</p></th>
-        <th colspan="11"><p></p></th>
+        <th colspan="8"><p></p></th>
         <th> 
         <%= form_tag(sesions_path, method: :get) do %>
           <%= text_field_tag :term %>
-          <%= submit_tag 'Search' %>
+          <%= submit_tag 'Buscar' %>
         <% end %>
         </th>
       </tr>
