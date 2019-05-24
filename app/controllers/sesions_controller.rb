@@ -16,6 +16,7 @@ class SesionsController < ApplicationController
     respond_to do |format|
       if @sesion.update(sesion_params)
         format.html { render 'nutriologo_pages/mis_sesiones', notice: 'sesion was successfully updated.' }
+        @sesion.update(active: false)
         format.json { render :show, status: :ok, location: @sesion }
       else
         format.html { render :edit }
