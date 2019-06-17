@@ -1,24 +1,20 @@
 <div class="row">
   <div class="col s12 no-padding-left">
     <div class="card">
-      <div class="card-item rounded center">
-        <div class="card-title">
-          <p class="font-size-title">Bienvenido </p>
-        </div>
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="field middle">
-            <i class="material-icons md-36 black">account_circle</i>
-            <%= f.text_field :username, :placeholder => "Usuario", autofocus: true, autocomplete: "username", class: "field-input font-size-text" %>
-          </div>
-          <div class="field middle">
-            <i class="material-icons md-36 black">fingerprint</i>
-            <%= f.password_field :password, :placeholder => "Contraseña", autocomplete: "current-password", class: "field-input font-size-text" %>
-          </div>
-          <% if devise_mapping.rememberable? -%>
-            <p class="font-size-small"><%= f.check_box :remember_me %> Remember Me</p>
-          <% end -%>
-          <%= f.submit "Iniciar Sesión", class: "card-action submit rounded" %>
-        <% end %>
+      <div class="card-item-half left">
+          <p class"card-title">Nutriologo</p>
+        <p>
+          <img src="<%= asset_path( 'nutriologo_login.jpg' ) %>" height="120px" width="120px"/>
+        </p>
+        <%= link_to "Ingresa Aquí", '/nutriologos/sign_in', class: "card-action left" %>
+      </div>
+      <div class="divider"></div>
+      <div class="card-item-half right">
+        <p class"card-title">Paciente</p>
+        <p>
+          <i class="material-icons md-120">person</i>
+        </p>
+        <%= link_to "Ingresa Aquí", '/pacientes/sign_in', class: "card-action right" %>
       </div>
     </div>
   </div>
