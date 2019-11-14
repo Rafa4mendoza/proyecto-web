@@ -1,6 +1,6 @@
 class DropTips_ycomentariosTable < ActiveRecord::Migration[5.1]
     def up
-        drop_table :tipsy_comentarios 
+        drop_table :tips_ycomentarios 
     end
     
     def down
