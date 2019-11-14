@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.new
-user.username = 'salud360admin'
-user.password = '5alud3^)'
-user.password_confirmation = '5alud3^)'
+user.username = 'administrador'
+user.password = 'pol123'
+user.password_confirmation = 'pol123'
 user.save!
