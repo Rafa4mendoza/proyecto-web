@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Salud360</title>
+    <title>Nuti Web</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -48,27 +48,11 @@
             if nutriologo_signed_in? %>
               <li><a href="/nutriologo_pages/mis_sesiones"><h5>Mis Sesiones</h5></a></li>
               <li><a href="/nutriologo_pages/mis_pacientes"><h5>Mis Pacientes</h5></a></li>
-              <li>
-                <%= link_to comments_path do %>
-                  <h5>Comentarios</h5>
-                <% end %>
-              </li>
               <li><a href="/nutriologos/sign_out" data-method="delete"><h5>Logout</h5></a></li>
             <% end
             if paciente_signed_in? %>
               <li><a href="/pacientes_pages/mis_sesiones"><h5>Mi Perfil</h5></a></li>
-              <li><a href="/documents"><h5>Material de Sesiones</h5></a></li>
               <li><a href="/pacientes_pages/programarCita"><h5>Citas</h5></a></li>
-              <% if current_paciente.dieta.present? %>
-                <li><a><h5><%= link_to 'Mi Dieta', current_paciente.dieta.dietaPDF.url, style: "font-size: 25px;" %></h5></a></li>
-              <% else %>
-                <li><a href="/pacientes_pages/ver_dietas"><h5>Mi Dieta</h5></a></li>
-              <% end %>
-              <li>
-                <%= link_to comments_path do %>
-                  <h5>Comentarios</h5>
-                <% end %>
-              </li>
               <li><a href="/pacientes/sign_out" data-method="delete"><h5>Logout</h5></a></li>
             <% end %>
           </ul>
@@ -90,7 +74,6 @@
               <li><a href="/nutriologos/sign_out" data-method="delete"><h4>Logout</h4></a></li>
             <% else %>
               <li><a href="/pacientes_pages/mis_sesiones"><h5>Mi Perfil</h5></a></li>
-              <li><a href="/documents"><h5>Material de Sesiones</h5></a></li>
               <li><a href="/pacientes_pages/programarCita"><h5>Citas</h5></a></li>
               <li><a href="/pacientes/sign_out" data-method="delete"><h5>Logout</h5></a></li>
             <% end %>

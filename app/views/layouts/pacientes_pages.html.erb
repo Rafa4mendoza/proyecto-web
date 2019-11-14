@@ -31,19 +31,7 @@
 
     <div class="sidenav-salud">
       <a href="/pacientes"><p>Mi Perfil</p></a>
-      <a href="/pacientes_pages/ver_metas"><p>Ver Metas</p></a>
-      <a href="/documents"><p>Material de Sesiones</p></a>
       <a href="/pacientes_pages/programarCita"><p>Citas</p></a>
-      <% if current_paciente.dieta.present? %>
-        <%= link_to current_paciente.dieta.dietaPDF.url do %>
-          <p>Mi Dieta</p>
-        <% end %>
-      <% else %>
-        <a href="/pacientes_pages/ver_dietas"><p>Mi Dieta</p></a>
-      <% end %>
-      <%= link_to comments_path do %>
-        <p>Comentarios</p>
-      <% end %>
     </div>
 
     <div class="container-salud">

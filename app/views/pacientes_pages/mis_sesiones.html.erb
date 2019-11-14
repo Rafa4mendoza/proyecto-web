@@ -2,7 +2,7 @@
   <div class="col s12">
     <div class="card rounded" style="margin: auto; text-align='center'">
       <div class="card-content">
-        <p class="font-size-title">Hola <%= current_paciente.username %>, tu plan es <%=current_paciente.objetivo%> y estos son tus datos:</p>
+        <p class="font-size-title">Hola <%= current_paciente.username %>, tu plan es ser más saludable> y estos son tus datos:</p>
       </div>
     </div>
   </div>
@@ -122,57 +122,5 @@
           </div>
         </div>
       </div>
-
-      <div class="col s12">
-        <div class="card rounded">
-          <div class="card-content">
-            <p class="card-title">Historial</p>
-            <div class="row">
-              <div class = "col s4">
-                <div class="row">
-                  <div class="col s12">
-                    <p>Historial de Peso</p>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col s12">
-                    <%= line_chart current_paciente_pesos %>
-                  </div>
-                </div>
-              </div>
-
-              <div class = "col s4">
-                <div class="row">
-                  <div class="col s12">
-                    <p>Historial de % de Grasa</p>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col s12">
-                    <%= line_chart current_paciente_grasa %>
-                  </div>
-                </div>
-              </div>
-
-              <div class = "col s4">
-                <div class="row">
-                  <div class="col s12">
-                    <p>Historial de % de Músculo</p>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col s12">
-                    <%= line_chart current_paciente_musculo %>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
