@@ -31,13 +31,7 @@
       <% current_pacientes_nutriologo.each do |paciente| %>
         <tr>
           <td><p><%= paciente.username %></p></td>
-          <% unless paciente.dieta.present? %>
-            <td style='text-align: center;'> <i class="material-icons tooltipped" style="color: #ff6961;" data-position="top" data-tooltip="¡El paciente no tiene dieta!">warning</i> </td>
-          <% else %>
-            <td style='text-align: center;'> <i class="material-icons tooltipped" style="visibility: hidden; color: #ff6961;" data-position="top" data-tooltip="¡El paciente no tiene dieta!">warning</i> </td>
-          <% end %>
           <td><%= link_to 'Ver Info Paciente', "/sesiones_paciente/"+paciente.id.to_s(), class: "col s10 btn btn-primary" %></td>
-          <td><%= link_to 'Ver Metas y Objetivo Paciente', "/metas_paciente/"+paciente.id.to_s(), class: "col s10 btn btn-primary" %></td>
         </tr>
       <% end %>
     </tbody>
