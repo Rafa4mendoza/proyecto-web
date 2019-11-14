@@ -6,3 +6,4 @@ class DropTips_ycomentariosTable < ActiveRecord::Migration[5.1]
     def down
         raise ActiveRecord::IrreversibleMigration
     end
+end

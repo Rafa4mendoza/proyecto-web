@@ -6,3 +6,4 @@ class DropCommentsTable < ActiveRecord::Migration[5.1]
     def down
         raise ActiveRecord::IrreversibleMigration
     end
+end
