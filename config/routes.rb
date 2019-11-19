@@ -9,11 +9,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :sesions
-  resources :meta, defaults:{format:'json'}
-  resources :documents
-  resources :tips_ycomentarios
-  resources :dieta
-  resources :comments
 
   mount RailsAdmin::Engine => '/user', as: 'rails_admin'
   get 'static_pages/home'
@@ -24,19 +19,14 @@ Rails.application.routes.draw do
   get '/nutriologos' => 'nutriologo_pages#mis_sesiones', as: :nutriologo_root
   get '/pacientes' => 'pacientes_pages#mis_sesiones', as: :paciente_root
   get 'pacientes_pages/programarCita'
-  get 'pacientes_pages/ver_metas'
   get '/nutriologo_pages/mis_pacientes'
-  get '/pacientes_pages/ver_comentarios'
-  get '/pacientes_pages/ver_dietas'
 
 
 
   get '/metas_paciente/:id', to: 'nutriologo_pages#metas_paciente'
   get '/metas_cita/:id', to: 'nutriologo_pages#metas_cita'
   get '/sesiones_paciente/:id', to: 'nutriologo_pages#sesiones_paciente'
-  get '/dietas_paciente/:id', to: 'nutriologo_pages#dietas_paciente'
 
-  patch '/cambiar_objetivo/:id', to: 'nutriologo_pages#cambiar_objetivo'
 
   namespace :user do
     root 'user#index'

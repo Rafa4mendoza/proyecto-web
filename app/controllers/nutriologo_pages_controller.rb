@@ -28,18 +28,6 @@ before_action :user_is_nutriologo
     @sesions = paciente_sesions(@paciente)
   end
 
-  def dietas_paciente
-    @paciente=params[:id]
-    @dietas = paciente_dietas(@paciente)
-  end
-
-  def cambiar_objetivo
-    if @paciente = Paciente.find_by(id: params[:id])
-       if @paciente.update(objetivo: params[:paciente][:objetivo])
-       end
-    end
-    redirect_back(fallback_location: '/nutriologo_pages/mis_pacientes')
-  end
 
   def user_is_nutriologo
     unless nutriologo_signed_in?

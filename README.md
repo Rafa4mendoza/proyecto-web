@@ -1,6 +1,6 @@
-# Salud360
+# NutriWeb
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/c73a06f13786a69e4a4d/maintainability)](https://codeclimate.com/github/ProyectoIntegrador2018/salud360/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c73a06f13786a69e4a4d/maintainability)](https://github.com/Rafa4mendoza/proyecto-web.git)
 
 Página web para el manejo de información del programa salud 360
 
@@ -16,13 +16,7 @@ Página web para el manejo de información del programa salud 360
 * [Deploy project to heroku](#deploy-project-to-heroku)
 * [Workflow](#Workflow)
 * [Running specs](#running-specs)
-
-
-### Client Details
-
-| Name               | Email             | Role |
-| ------------------ | ----------------- | ---- |
-| Karina García | karigarciasr@gmail.com | Cliente |
+|
 
 
 ### Environment URLS
@@ -30,14 +24,7 @@ Página web para el manejo de información del programa salud 360
 * **Production** - https://sistemasalud360.herokuapp.com/
 * **Development** - https://staging-sistemasalud360.herokuapp.com/
 
-### Da team
 
-| Name           | Email             | Role        |
-| -------------- | ----------------- | ----------- |
-| Mauricio Cortés |  A00816689@itesm.mx| Development |
-| Victor Elizalde | A00817586@itesm.mx | Development |
-| Hernan Iruegas | A00817021@itesm.mx | Development |
-| Jorge Diaz | A01191342@itesm.mx | Development/Product Owner |
 
 ### Management tools
 
@@ -57,7 +44,7 @@ After installing please you can follow this simple steps:
 1. Clone this repository into your local machine
 
 ```bash
-$ git clone https://github.com/ProyectoIntegrador2018/salud360.git
+$ git clone https://github.com/Rafa4mendoza/proyecto-web.git
 ```
 
 2. Install gems and dependencies:
